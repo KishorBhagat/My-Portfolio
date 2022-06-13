@@ -582,6 +582,9 @@ textarea{
     .abtHead{
         top: 20px;
     }
+    .me{
+        width: 83%;
+    }
     .col-3{
         display: flex;
         justify-content: center;
