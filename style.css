@@ -423,7 +423,7 @@ button{
     width: 100%;
     margin: 5px 0;
 }
-.contactForm input:hover{
+.contactForm input:hover, textarea:hover{
     box-sizing: border-box;
     border: 1px solid var(--primary-color);
     border-radius: 3px;
