@@ -49,13 +49,13 @@ header.active{
     /* display: flex; */
     visibility: visible;
 }
-.menu-icon{
+/* .menu-icon{
     position: absolute;
     right: 5%;
 }
 #cross-icon{
     display: none;
-}
+} */
 .social a{
     color: var(--primary-color);
     margin: 5px;
@@ -551,12 +551,24 @@ textarea{
         color: black;
         transition: 0.2s ease;
     }
-    .menu-icon img{
+
+
+    .menu-icon{
+        position: absolute;
+        right: 5%;
+    }
+    #menu-icon{
         display: block;
+    }
+    #cross-icon{
+        display: none;
     }
     .menu-icon img:hover{
         cursor: pointer;
     }
+
+    
+
     .social a{
         display: none;
     }
