@@ -51,8 +51,8 @@ function toggle(){
 
 
 // Code for what to do when the vertical menu bar navigation links are clicked
-let menuLinks = document.getElementsByClassName('menuLinks');
-for(let link of menuLinks){
+let verticalmenuLinks = document.getElementsByClassName('verticalmenuLinks');
+for(let link of verticalmenuLinks){
     link.addEventListener('click', function close(){
         crossIcon.style.display = "none";
         menuIcon.style.display = "block";
