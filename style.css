@@ -22,6 +22,13 @@
 .inside{
     padding: 0 8%;
 }
+header.active{
+    left:0%;
+}
+
+#verticalNav{
+    display: none;
+}
 
 .navbar{
     /* position: relative; */
@@ -31,11 +38,12 @@
     /* background-color: red; */
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    
     /* padding: 10px; */
 }
-nav{
+#horizontalNav{
     display: flex;
+    margin: auto;
 }
 .menuList{
     /* display: flex; */
@@ -52,12 +60,12 @@ nav{
     color: var(--primary-color);
     margin: 5px;
 }
-nav ul li{
+#horizontalNav ul li{
     list-style: none;
     display: inline-block;
     margin: 0 15px;
 }
-nav ul a{
+#horizontalNav ul a{
     
     /* background-color: var(--primary-color); */
     text-decoration: none;
@@ -65,7 +73,7 @@ nav ul a{
     font-size: 18px;
     /* font-weight: 600; */
 }
-nav ul a:hover{
+#horizontalNav ul a:hover{
     color: var(--primary-color);
     transition: 0.2s ease;
 }
@@ -181,6 +189,9 @@ nav ul a:hover{
     /* justify-content: right; */
     margin-right: 50px;
 }
+.col-4 span{
+    color: rgb(13 98 151);
+}
 button{
     
     border: none;
@@ -271,10 +282,10 @@ button{
     width: 10%;
 }
 .skillCard .bar .node{
-    width: 50%;
+    width: 10%;
 }
 .skillCard .bar .mongo{
-    width: 80%;
+    width: 10%;
 }
 .skillCard .bar .python{
     width: 50%;
@@ -496,7 +507,7 @@ textarea{
 }
 /* #upBtn:hover{
     color: rgba(17, 163, 255, 0.5);
-}*/
+} */
 
 
 
@@ -504,8 +515,16 @@ textarea{
     .inside{
         padding: 0 2%;
     }
-    nav ul{
+    #horizontalNav{
+        display: none;
+    }
+    #verticalNav{
         visibility: hidden;
+        display: flex;
+        margin: auto;
+    }
+    #verticalNav ul{
+        /* visibility: hidden; */
         width: 100%;
         height: 100%;
         background-color: var(--deep);
@@ -515,20 +534,22 @@ textarea{
         z-index: 2;
         justify-content: center;
     }
-    nav ul li{
+    #verticalNav ul li{
+        list-style: none;
         display: block;
         background-color: inherit;
         text-align: center;
         margin: 40px 0;
     }
-    nav ul a{
+    #verticalNav ul a{
+        text-decoration: none;
         background-color: inherit;
         font-size: 35px;
-        color: 
-        white;
+        color:white;
     }
-    nav ul a:hover{
+    #verticalNav ul a:hover{
         color: black;
+        transition: 0.2s ease;
     }
     .menu-icon img{
         display: block;
@@ -583,7 +604,7 @@ textarea{
         top: 20px;
     }
     .me{
-        width: 83%;
+        width: 81%;
     }
     .col-3{
         display: flex;
@@ -663,5 +684,8 @@ textarea{
         box-sizing: border-box;
         min-height: 50vh;
     }
+
+
+
 
 }
