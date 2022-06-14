@@ -617,6 +617,7 @@ textarea{
     }
     .me{
         width: 81%;
+        margin-bottom: 20px;
     }
     .col-3{
         display: flex;
