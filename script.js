@@ -12,16 +12,6 @@ function scrollFunction(){
 }
 
 
-// Code to smothely navigate to sections when nav links are clicked
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function(e){
-        e.preventDefault();
-        document.querySelector(this.getAttribute("href")).scrollIntoView({
-            behavior: "smooth"
-        })
-    })
-})
-
 let menuIcon = document.getElementById('menu-icon');
 let crossIcon = document.getElementById('cross-icon');
 let verticalmenuList = document.getElementById('verticalmenuList');
@@ -62,3 +52,4 @@ for(let link of verticalmenuLinks){
         document.body.style.overflow = "visible"
     })
 }
+
