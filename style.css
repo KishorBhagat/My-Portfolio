@@ -13,10 +13,15 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-    background-color: var(--bg-color);
     scroll-behavior: smooth;
 }
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg-color);
+}
+/* body::-webkit-scrollbar {
+    display: none;
+  } */
 
 .inside{
     padding: 0 8%;
@@ -97,6 +102,10 @@
     font-weight: 300;
 }
 .col-1 a{
+    text-decoration: none;
+    color: black;
+}
+.col-1 #contactBtn{
     font-size: 20px;
     text-decoration: none;
     cursor: pointer;
@@ -105,7 +114,7 @@
     padding: 3px 20px;
     border-radius: 0 20px 20px 20px;
 }
-.col-1 a:hover, button:hover{
+.col-1 #contactBtn:hover, button:hover{
     background-color: rgba(17, 163, 255, 0.5);
     transition: 0.2s ease;
     cursor: pointer;
@@ -133,7 +142,6 @@
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-
 }
 .about{
     min-height: 70vh;
@@ -168,8 +176,7 @@
 .col-4 span{
     color: rgb(13 98 151);
 }
-button{
-    
+button{ 
     border: none;
     font-size: 20px;
     text-decoration: none;
@@ -180,6 +187,10 @@ button{
     padding: 3px 20px;
     border-radius: 0 20px 20px 20px;    
 }
+.col-4 button a{
+    text-decoration: none;
+    color: #fff;
+}
 
 /* Skills section */
 #skills{
@@ -187,7 +198,7 @@ button{
 }
 .skillHead{
     position: relative;
-    margin-top: 10px;
+    /* margin-bottom: 10px; */
     height: 10vh;
     width: 100%;
     text-align: center;
@@ -217,7 +228,7 @@ button{
     background-color: inherit;
 }
 .skillCard .bar{
-    height: 10px;
+    height: 7px;
     width: 100%;
     background-color: var(--bg-color);
     margin-top: 15px;
@@ -241,7 +252,7 @@ button{
 .skillCard .bar .react{
     width: 10%;
 }
-.skillCard .bar .angular{
+.skillCard .bar .express{
     width: 10%;
 }
 .skillCard .bar .node{
@@ -253,7 +264,16 @@ button{
 .skillCard .bar .python{
     width: 50%;
 }
-.skillCard .bar .django{
+.skillCard .bar .java{
+    width: 60%;
+}
+.skillCard .bar .c{
+    width: 70%;
+}
+.skillCard .bar .cpp{
+    width: 50%;
+}
+.skillCard .bar .sql{
     width: 10%;
 }
 .card:hover{
