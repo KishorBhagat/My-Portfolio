@@ -26,6 +26,7 @@ function toggle(){
         crossIcon.style.display = "block";
         menuIcon.style.display = "none";
         verticalmenuList.style.visibility = "visible";
+        verticalmenuList.style.left = "0";
         visibility = true;
         document.body.style.overflow = "hidden"
     }
@@ -34,6 +35,7 @@ function toggle(){
         crossIcon.style.display = "none";
         menuIcon.style.display = "block";
         verticalmenuList.style.visibility = "hidden";
+        verticalmenuList.style.left = "-100%";
         visibility = false;
         document.body.style.overflow = "visible"
     }
