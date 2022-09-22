@@ -4,38 +4,30 @@ window.onscroll = function(){
 let upBtn = document.getElementById('upBtn');
 function scrollFunction(){
     if(document.body.scrollTop > 20 || document.documentElement.scrollTop > 20){
-        upBtn.style.display = "block";
+        upBtn.style.bottom = '20px';
     }
     else{
-        upBtn.style.display = "none";
+        upBtn.style.bottom = '-10%';
     }
 }
 
 
 let menuIcon = document.getElementById('menu-icon');
-let crossIcon = document.getElementById('cross-icon');
-let verticalmenuList = document.getElementById('verticalmenuList');
+let menu = document.getElementById('menuList');
 
 menuIcon.addEventListener('click', toggle);
-crossIcon.addEventListener('click', toggle);
 let visibility = false;
 function toggle(){
     // console.log("opened");
     if(visibility == false){
-
-        crossIcon.style.display = "block";
-        menuIcon.style.display = "none";
-        verticalmenuList.style.visibility = "visible";
-        verticalmenuList.style.left = "0";
+        menuIcon.setAttribute('src',  'images/cross_icon-icons.com_72347.svg');
+        menu.style.left = "0";
         visibility = true;
         document.body.style.overflow = "hidden"
     }
     else{
-        // console.log("closed");
-        crossIcon.style.display = "none";
-        menuIcon.style.display = "block";
-        verticalmenuList.style.visibility = "hidden";
-        verticalmenuList.style.left = "-100%";
+        menuIcon.setAttribute('src',  'images/menu_icon-icons.com_72311.svg');
+        menu.style.left = "-100%";
         visibility = false;
         document.body.style.overflow = "visible"
     }
@@ -43,15 +35,10 @@ function toggle(){
 
 
 // Code for what to do when the vertical menu bar navigation links are clicked
-let verticalmenuLinks = document.getElementsByClassName('verticalmenuLinks');
-for(let link of verticalmenuLinks){
+let menuLinks = document.getElementsByClassName('menuLinks');
+for(let link of menuLinks){
     link.addEventListener('click', function close(){
-        crossIcon.style.display = "none";
-        menuIcon.style.display = "block";
-        verticalmenuList.style.visibility = "hidden";
-        visibility = false;       
-        
-        document.body.style.overflow = "visible"
+        visibility = true;
+        toggle();
     })
 }
-
